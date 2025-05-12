@@ -1,0 +1,83 @@
+name: sonsom_financial_tracker
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  get: ^4.7.2
+  dartz: ^0.10.1
+  intl: ^0.19.0
+  dio: ^5.8.0+1
+  flutter_spinkit: ^5.2.1
+  skeletonizer: ^1.4.3
+  get_it: ^8.0.3
+  logger: ^2.5.0
+  flutter_animate: ^4.5.2
+  flutter_native_splash: ^2.4.4
+  flutter_secure_storage: ^9.2.4
+  image_picker: ^1.1.2
+  shared_preferences: ^2.5.3
+  flutter_svg: ^2.1.0
+  dropdown_button2: ^2.3.9
+  lottie: ^3.2.0
+  chopper: ^8.0.3
+
+  pull_to_refresh: ^2.0.0
+  cached_network_image: ^3.4.1
+  google_nav_bar: ^5.0.7
+  persistent_bottom_nav_bar: ^6.2.1
+  flutter_localization: ^0.3.2
+
+dev_dependencies:
+
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.1.7
+  chopper_generator: ^8.0.3
+  json_serializable: ^6.1.4
+  swagger_dart_code_generator:
+    git:
+      url: https://github.com/nhoemchenda/swagger-dart-code-generator.git
+
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - assets/svg/
+    - assets/images/
+    - assets/font/
+
+  fonts:
+    - family: Battambang
+      fonts:
+        - asset: assets/font/Battambang-Thin.ttf
+          weight: 100
+        - asset: assets/font/Battambang-Light.ttf
+          weight: 300
+        - asset: assets/font/Battambang-Regular.ttf
+          weight: 400
+        - asset: assets/font/Battambang-Regular.ttf
+          weight: 500
+        - asset: assets/font/Battambang-Bold.ttf
+          weight: 600
+        - asset: assets/font/Battambang-Bold.ttf
+          weight: 700
+
+#Generator Script
+scripts: #Run this when you change your api repository
+  build:  flutter pub run build_runner clean && flutter pub run build_runner build --delete-conflicting-outputs
+
+  build_apk: flutter build apk -t lib/main.dart --dart-define=BUILD_DATE=$BUILD_DATE --target-platform android-arm64 && mv build/app/outputs/flutter-apk/app-release.apk "build/app/outputs/flutter-apk/MLMULPC_Attendance_$VERSION_[$(date +%Y_%m_%d)]_UAT.apk"
+  build_prod_apk: export BUILD_DATE="$(date +%Y%m%d)" && VERSION=$(grep 'version:' pubspec.yaml | awk '{print $2}') && flutter build apk -t lib/main.dart --dart-define=BUILD_DATE=$BUILD_DATE && mv build/app/outputs/flutter-apk/app-release.apk "build/app/outputs/flutter-apk/MLMULPC_Attendance_v${VERSION}_[$(date +%Y_%m_%d)]_PROD.apk"
+  build_aab: export BUILD_DATE="$(date +%Y%m%d)" && flutter build appbundle -t lib/main.dart --dart-define=BUILD_DATE=$BUILD_DATE
+  build_ipa: export BUILD_DATE="$(date +%Y%m%d)" && flutter build ipa -t lib/main.dart  --dart-define=BUILD_DATE=$BUILD_DATE
