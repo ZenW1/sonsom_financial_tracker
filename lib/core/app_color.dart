@@ -11,11 +11,11 @@ class AppColors {
   static const Color secondaryColor = Color(0xFF1D2846);
   static const Color ternaryColor = Color(0xFFaea4c3);
   static const Color greyColor = Color(0xFF959DA3);
-  static const Color blackColor = Color(0xFF232323);
+  static const Color blackColor = Color(0xFF121212);
   static const Color redColor = Color(0xFFE44646);
-  static const Color backgroundColor = Color(0xFFF9F9F9);
+  static const Color backgroundColor = Color(0xFFF7F7F9);
   static const Color backgroundGrey = Color(0xFFF1F1F1);
-  static const Color lightGreyColor = Color(0xFFE5E5E5);
+  static const Color lightGreyColor = Color(0xFFF5F5F5);
   static const Color whiteColor = Color(0xFFFFFFFF);
   static const Color yellowColor = Color(0xFFF2B917);
   static const Color pinkColor = Color(0xFFF579C1);

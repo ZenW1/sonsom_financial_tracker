@@ -40,7 +40,7 @@ class _StatisticsScreenState extends State<StatisticsScreen> with SingleTickerPr
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 5,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
           title: Text('Statistics'),
@@ -51,16 +51,15 @@ class _StatisticsScreenState extends State<StatisticsScreen> with SingleTickerPr
               borderRadius: BorderRadius.circular(16),
               child: Container(
                 height: 50,
-                margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: TabBar(
-                  onTap: (integer) {
-                    setState(() {
-                      _controller.index = integer;
-                    });
-                  },
+                  // onTap: (integer) {
+                  //   setState(() {
+                  //     _controller.index = integer;
+                  //   });
+                  // },
                   controller: _controller,
                   tabAlignment: TabAlignment.fill,
                   dividerColor: Colors.transparent,
@@ -83,6 +82,7 @@ class _StatisticsScreenState extends State<StatisticsScreen> with SingleTickerPr
         body: Column(
           children: [
             SizedBox(
+             height: 500,
               child: TabBarView(
                 controller: _controller,
                 children: [

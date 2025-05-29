@@ -24,18 +24,11 @@ class ApiConfig {
   }
 }
 
-
-class AppApi {
-  static const String loginRequest = '/auth/sign-in';
-  static const String clockInOut = '/attendance/clock/in-out';
-  static const String getLastAttendance = '/attendance/get-my-last-attendance';
-  static const String getMe = '/auth/get-me';
-  static const String selectBranch = '/select/branches';
-  static const String selectDivisionLevel1 = '/select/get-list-division-level1';
-  static const String selectDivisionLevel2 = '/select/get-list-division-level2';
-  static const String selectDepartmentLevel1 = '/select/get-list-department-level1';
-  static const String selectDepartmentLevel2 = '/select/get-list-department-level2';
-  static const String selectDepartmentLevel3 = '/select/get-list-department-level3';
+class AppCollectionKey {
+  static String user = "user";
+  static String budget = "budget";
+  static String income = "income";
+  static String expense = "expense";
 }
 
 class ConstantPreferenceKey {

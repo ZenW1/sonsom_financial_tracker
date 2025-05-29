@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "589138236143",
+    "project_id": "sonsom-financial-tracker",
+    "storage_bucket": "sonsom-financial-tracker.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589138236143:android:bc0a8a92be2d408103411a",
+        "android_client_info": {
+          "package_name": "come.somsom.saving.kh.sonsom_financial_tracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPn1d5zk1xdMsGx7CbcusW2WaVKSTz8Q4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

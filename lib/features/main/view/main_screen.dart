@@ -16,7 +16,6 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateMixin {
-
   final _controller = Get.put(MainController());
 
   @override
@@ -25,11 +24,10 @@ class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateM
     super.initState();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Obx(
-          () {
+      () {
         return Scaffold(
           resizeToAvoidBottomInset: false,
           body: mainScreen(
@@ -60,7 +58,6 @@ class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateM
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
       ),
-
       child: Center(
         child: ListView.separated(
           scrollDirection: Axis.horizontal,
@@ -101,7 +98,7 @@ class _MainScreenState extends State<MainScreen> with SingleTickerProviderStateM
       height: 5,
       width: 55,
       decoration: BoxDecoration(
-        borderRadius:  BorderRadius.only(
+        borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(Dimensions.radiusLarge()),
           bottomRight: Radius.circular(Dimensions.radiusLarge()),
         ),

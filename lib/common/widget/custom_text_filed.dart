@@ -66,7 +66,7 @@ class _GlobalTextFieldState extends State<CustomTextField> {
   Widget build(BuildContext context) {
     return Material(
       borderOnForeground: false,
-      borderRadius: BorderRadius.circular(25),
+      borderRadius: BorderRadius.circular(16),
       child: TextFormField(
         key: widget.key,
         validator: widget.validator,

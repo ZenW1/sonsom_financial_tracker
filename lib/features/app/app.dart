@@ -4,6 +4,7 @@ import 'package:sonsom_financial_tracker/features/main/view/main_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 
+import '../../core/app_color.dart';
 import '../../core/app_theme.dart';
 
 
@@ -24,11 +25,10 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       theme: AppTheme.lightAppTheme,
-      // themeMode: ThemeMode.dark,
-      // color: AppColors.primary,
+      themeMode: ThemeMode.dark,
+      color: AppColors.primary,
       debugShowCheckedModeBanner: false,
-      locale: const Locale('km_KH'),
-
+      // locale: const Locale('km_KH'),
       localizationsDelegates:  [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
@@ -36,9 +36,9 @@ class _AppState extends State<App> {
       ],
       // address support locale
 
-      fallbackLocale: const Locale('km'),
+      fallbackLocale: const Locale('en'),
       supportedLocales:const [
-        Locale('km', 'KH'),
+        Locale('en', 'EN'),
       ],
       home: const MainScreen(),
     );
